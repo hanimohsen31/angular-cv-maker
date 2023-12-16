@@ -1,0 +1,76 @@
+.containerFluid {
+  // padding-top: 3rem;
+  // padding-bottom: 3rem;
+  .componentContainer {
+    // margin-left: 3rem;
+    // margin-right: 3rem;
+    .formContainer {
+      height: fit-content;
+      pre {
+        overflow-x: scroll;
+      }
+    }
+  }
+  .buttons {
+    // position: fixed;
+    // left: 20px;
+    // bottom: 20px;
+    z-index: 3;
+    button {
+      height: 70px;
+      width: 70px;
+      margin-top: 20px;
+      // margin-bottom: 20px;
+      // border-radius: 50%;
+    }
+  }
+}
+
+.Page {
+  overflow: hidden;
+  scale: 0.7;
+  transform-origin: 0 0;
+}
+
+.col-64 {
+  width: 64% !important;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.363);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+@media print {
+  .formContainer {
+    display: none !important;
+  }
+
+  .buttons {
+    display: none;
+  }
+
+  .componentContainer {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .containerFluid {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .Page {
+    scale: 1 !important;
+    transform-origin: 50% 50% !important;
+  }
+}
