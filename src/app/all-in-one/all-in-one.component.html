@@ -14,9 +14,7 @@
       <!-- <button class="btn btn-outline-primary" (click)="pdf()">PDF</button> -->
     </div>
     <!-- -------------------------------------------- inputs -------------------------------------------- -->
-    <div
-      class="d-flex gap-2 flex-wrap justify-content-center row col-4 formContainer"
-    >
+    <div class="d-flex gap-2 flex-wrap justify-content-center row col-4 formContainer scroll">
       <div class="input-field my-1">
         <label class="text-primary">User <span *ngIf="alert" class="text-danger">(User Id Required)</span> </label>
         <input class="form-control col-5" [(ngModel)]="userId" />
@@ -149,11 +147,11 @@
           [(ngModel)]="dataObj.PersonalInfo"
         ></textarea>
       </div>
-      
+
     </div>
 
     <!-- -------------------------------------------- pages -------------------------------------------- -->
-    <div class="paperContainer d-flex flex-column align-items-center">
+    <div class="paperContainer d-flex flex-column align-items-center scroll">
       <!-- page 1 -->
       <div class="pageContainer pc pc1">
         <div class="Page Paper App d-flex flex-column">

@@ -46,6 +46,11 @@
   z-index: 2;
 }
 
+.scroll {
+  height: 100vh !important;
+  overflow-y: scroll;
+}
+
 @media print {
   .formContainer {
     display: none !important;
@@ -75,5 +80,10 @@
   .Page {
     scale: 1 !important;
     transform-origin: 50% 50% !important;
+  }
+
+  .scroll{
+    height: fit-content !important;
+    overflow: auto;
   }
 }
