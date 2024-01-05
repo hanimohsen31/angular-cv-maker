@@ -6,7 +6,9 @@
     "start": "ng serve --open",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "copy-files": "cp -r dist/angular17test2/browser* docs/",
+    "deploy": "ng build && git add . && git commit -m 'deploy' && git push origin main && firebase deploy "
   },
   "private": true,
   "dependencies": {
