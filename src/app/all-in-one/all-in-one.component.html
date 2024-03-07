@@ -309,7 +309,8 @@
                 <h3>Projects</h3>
                 <ul>
                   <li *ngFor="let elm of parser(dataObj.Projects)">
-                    <h4>{{ elm.name }}</h4>
+                    <h4>{{ elm?.name }}</h4>
+                    <h5 *ngIf="elm.description">{{ elm?.description }}</h5>
                     <div>
                       <a
                         *ngIf="elm.code"
