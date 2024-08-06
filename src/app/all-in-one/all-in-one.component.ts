@@ -14,7 +14,7 @@ export class AllInOneComponent {
   dataObj: any = {};
   userId: any = null;
   alert = false;
-
+  workExperienceSlice = 5
   constructor(private DataService: DataService) {}
 
   ngOnInit() {

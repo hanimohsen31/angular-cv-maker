@@ -1,15 +1,9 @@
 <div class="container-fluid d-flex containerFluid">
-  <div
-    class="d-flex flex-row-reverse justify-content-between componentContainer"
-  >
+  <div class="d-flex flex-row-reverse justify-content-between componentContainer">
     <!-- -------------------------------------------- pages -------------------------------------------- -->
     <div class="buttons d-flex flex-column">
-      <button class="btn btn-outline-danger" (click)="getDataById()">
-        Get Data
-      </button>
-      <button class="btn btn-outline-danger" (click)="update()">
-        Update
-      </button>
+      <button class="btn btn-outline-danger" (click)="getDataById()">Get Data</button>
+      <button class="btn btn-outline-danger" (click)="update()">Update</button>
       <button class="btn btn-outline-primary" (click)="print()">Print</button>
       <!-- <button class="btn btn-outline-primary" (click)="pdf()">PDF</button> -->
     </div>
@@ -32,122 +26,63 @@
 
       <div class="input-field mb-1">
         <label class="text-primary">Personal Info</label>
-        <textarea
-          cols="30"
-          rows="10"
-          class="form-control col-5"
-          [(ngModel)]="dataObj.Personal"
-        ></textarea>
+        <textarea cols="30" rows="10" class="form-control col-5" [(ngModel)]="dataObj.Personal"></textarea>
       </div>
 
       <div class="input-field mb-1">
         <label class="text-primary">Work Experience</label>
-        <textarea
-          cols="30"
-          rows="10"
-          class="form-control col-5"
-          [(ngModel)]="dataObj.WorkExperience"
-        ></textarea>
+        <textarea cols="30" rows="10" class="form-control col-5" [(ngModel)]="dataObj.WorkExperience"></textarea>
       </div>
 
       <div class="input-field mb-1">
         <label class="text-primary">Contacts</label>
-        <textarea
-          cols="30"
-          rows="10"
-          class="form-control col-5"
-          [(ngModel)]="dataObj.Contacts"
-        ></textarea>
+        <textarea cols="30" rows="10" class="form-control col-5" [(ngModel)]="dataObj.Contacts"></textarea>
       </div>
 
       <div class="input-field mb-1">
         <label class="text-primary">Technical Skills</label>
-        <textarea
-          cols="30"
-          rows="10"
-          class="form-control col-5"
-          [(ngModel)]="dataObj.TechnicalSkills"
-        ></textarea>
+        <textarea cols="30" rows="10" class="form-control col-5" [(ngModel)]="dataObj.TechnicalSkills"></textarea>
       </div>
 
       <div class="input-field mb-1">
         <label class="text-primary">Language Skills</label>
-        <input
-          class="form-control col-5"
-          [(ngModel)]="dataObj.LanguageSkills"
-        />
+        <input class="form-control col-5" [(ngModel)]="dataObj.LanguageSkills" />
       </div>
 
       <div class="input-field mb-1">
         <label class="text-primary">Technical Skills Explained</label>
-        <textarea
-          cols="30"
-          rows="10"
-          class="form-control col-5"
-          [(ngModel)]="dataObj.TechnicalSkillsExplained"
-        ></textarea>
+        <textarea cols="30" rows="10" class="form-control col-5" [(ngModel)]="dataObj.TechnicalSkillsExplained"></textarea>
       </div>
 
       <div class="input-field mb-1">
         <label class="text-primary">Interpersonal Skills Explained</label>
-        <textarea
-          cols="30"
-          rows="10"
-          class="form-control col-5"
-          [(ngModel)]="dataObj.InterpersonalSkillsExplained"
-        ></textarea>
+        <textarea cols="30" rows="10" class="form-control col-5" [(ngModel)]="dataObj.InterpersonalSkillsExplained"></textarea>
       </div>
 
       <div class="input-field mb-1">
         <label class="text-primary">Interpersonal Skills</label>
-        <textarea
-          cols="30"
-          rows="10"
-          class="form-control col-5"
-          [(ngModel)]="dataObj.InterpersonalSkills"
-        ></textarea>
+        <textarea cols="30" rows="10" class="form-control col-5" [(ngModel)]="dataObj.InterpersonalSkills"></textarea>
       </div>
 
       <div class="input-field mb-1">
         <label class="text-primary">Projects</label>
-        <textarea
-          cols="30"
-          rows="10"
-          class="form-control col-5"
-          [(ngModel)]="dataObj.Projects"
-        ></textarea>
+        <textarea cols="30" rows="10" class="form-control col-5" [(ngModel)]="dataObj.Projects"></textarea>
       </div>
 
       <div class="input-field mb-1">
         <label class="text-primary">Education</label>
-        <textarea
-          cols="30"
-          rows="10"
-          class="form-control col-5"
-          [(ngModel)]="dataObj.Education"
-        ></textarea>
+        <textarea cols="30" rows="10" class="form-control col-5" [(ngModel)]="dataObj.Education"></textarea>
       </div>
 
       <div class="input-field mb-1">
         <label class="text-primary">Courses</label>
-        <textarea
-          cols="30"
-          rows="10"
-          class="form-control col-5"
-          [(ngModel)]="dataObj.Courses"
-        ></textarea>
+        <textarea cols="30" rows="10" class="form-control col-5" [(ngModel)]="dataObj.Courses"></textarea>
       </div>
 
       <div class="input-field mb-1">
         <label class="text-primary">Personal Info</label>
-        <textarea
-          cols="30"
-          rows="10"
-          class="form-control col-5"
-          [(ngModel)]="dataObj.PersonalInfo"
-        ></textarea>
+        <textarea cols="30" rows="10" class="form-control col-5" [(ngModel)]="dataObj.PersonalInfo"></textarea>
       </div>
-
     </div>
 
     <!-- -------------------------------------------- pages -------------------------------------------- -->
@@ -182,16 +117,17 @@
                     <div class="line"></div>
                   </div>
                   <div class="content">
-                    <div
-                      *ngFor="
-                        let elm of parser(dataObj.WorkExperience)?.slice(0, 4)
-                      "
-                    >
-                      <h3>{{ elm.title }}</h3>
+                    <div *ngFor="let elm of parser(dataObj.WorkExperience)?.slice(0, workExperienceSlice)">
+                      <h3 *ngIf="elm.shortForm">
+                        {{ elm.title }} <span *ngIf="elm.time">({{ elm?.time }})</span>
+                      </h3>
+                      <h3 *ngIf="!elm.shortForm">{{ elm.title }}</h3>
+
                       <h3>{{ elm.comp }}</h3>
                       <ul>
-                        <li *ngIf="elm.time">{{ elm.time }}</li>
-                        <li *ngIf="elm.desc">{{ elm.desc }}</li>
+                        <li *ngIf="elm.time && !elm.shortForm">{{ elm.time }}</li>
+                        <li *ngIf="!elm.time || elm.shortForm" class="d-none"></li>
+                        <li *ngIf="elm.desc && elm.showDescription">{{ elm.desc }}</li>
                         <li *ngIf="elm.period">{{ elm.period }}</li>
                       </ul>
                     </div>
@@ -202,20 +138,11 @@
             <div class="right py-3 col-4">
               <div class="Contacts">
                 <h3>Contacts</h3>
-                <div
-                  *ngFor="let elm of parser(dataObj.Contacts)"
-                  class="contact"
-                >
+                <div *ngFor="let elm of parser(dataObj.Contacts)" class="contact">
                   <div class="icon">
                     <img [src]="elm.icon" alt="" />
                   </div>
-                  <a
-                    *ngIf="elm.link"
-                    [href]="elm.link"
-                    target="_blank"
-                    rel="noreferrer"
-                    >{{ elm.title }}</a
-                  >
+                  <a *ngIf="elm.link" [href]="elm.link" target="_blank" rel="noreferrer">{{ elm.title }}</a>
                   <span *ngIf="!elm.link">{{ elm.title }}</span>
                 </div>
               </div>
@@ -261,16 +188,17 @@
                     <div class="line"></div>
                   </div>
                   <div class="content">
-                    <div
-                      *ngFor="
-                        let elm of parser(dataObj.WorkExperience)?.slice(4)
-                      "
-                    >
-                      <h3>{{ elm.title }}</h3>
+                    <div *ngFor="let elm of parser(dataObj.WorkExperience)?.slice(workExperienceSlice)">
+                      <h3 *ngIf="elm.shortForm">
+                        {{ elm.title }} <span *ngIf="elm.time">({{ elm?.time }})</span>
+                      </h3>
+                      <h3 *ngIf="!elm.shortForm">{{ elm.title }}</h3>
+
                       <h3>{{ elm.comp }}</h3>
                       <ul>
-                        <li *ngIf="elm.time">{{ elm.time }}</li>
-                        <li *ngIf="elm.desc">{{ elm.desc }}</li>
+                        <li *ngIf="elm.time && !elm.shortForm">{{ elm.time }}</li>
+                        <li *ngIf="!elm.time || elm.shortForm" class="d-none"></li>
+                        <li *ngIf="elm.desc && elm.showDescription">{{ elm.desc }}</li>
                         <li *ngIf="elm.period">{{ elm.period }}</li>
                       </ul>
                     </div>
@@ -312,31 +240,11 @@
                     <h4>{{ elm?.name }}</h4>
                     <h5 *ngIf="elm.description">{{ elm?.description }}</h5>
                     <div>
-                      <a
-                        *ngIf="elm.code"
-                        [href]="elm.code"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Project Code
-                      </a>
-                      <a
-                        *ngIf="elm.website"
-                        [href]="elm.website"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Visit Website
-                      </a>
+                      <a *ngIf="elm.code" [href]="elm.code" target="_blank" rel="noreferrer"> Project Code </a>
+                      <a *ngIf="elm.website" [href]="elm.website" target="_blank" rel="noreferrer"> Visit Website </a>
                       <ng-container *ngIf="elm.deployment">
                         <span>&#160;-&#160;</span>
-                        <a
-                          [href]="elm.deployment"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          Deployment
-                        </a>
+                        <a [href]="elm.deployment" target="_blank" rel="noreferrer"> Deployment </a>
                       </ng-container>
                     </div>
                   </li>
@@ -366,10 +274,7 @@
                     <div class="line"></div>
                   </div>
                   <div class="content">
-                    <div
-                      *ngFor="let elm of parser(dataObj.Education)"
-                      class="edu"
-                    >
+                    <div *ngFor="let elm of parser(dataObj.Education)" class="edu">
                       <h3>{{ elm?.lic }}</h3>
                       <h3>{{ elm?.desc }}</h3>
                       <ul>
@@ -421,7 +326,51 @@
           <span class="counter">Page 3</span>
         </div>
       </div>
+      <!-- page 4 -->
+      <div class="pageContainer pc pc3">
+        <div class="Page Paper App d-flex flex-column">
+          <div class="col-12">
+            <div class="Name">
+              <span>{{ dataObj.Name }}</span>
+              <div class="Title">{{ dataObj.Title }}</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="left">
+              <div class="Section Training">
+                <div class="header">Projects In Details</div>
+                <div class="body">
+                  <div class="sideLineAndIcons">
+                    <div class="filler"></div>
+                    <div class="line"></div>
+                  </div>
+                  <div class="content">
+                    <ul>
+                      <li *ngFor="let elm of parser(dataObj.Projects)" class="mb-2">
+                        <div class="projects-in-details-links-container">
+                          <span class="projects-in-details-name">{{ elm.name }}</span>
+                          <span class="projects-in-details-links">
+                            <a *ngIf="elm.code" [href]="elm.code" target="_blank" rel="noreferrer">Project Code</a>
+                            <a *ngIf="elm.website" [href]="elm.website" target="_blank" rel="noreferrer">Visit Website</a>
+                            <ng-container *ngIf="elm.deployment">
+                              <span>&#160;-&#160;</span>
+                              <a [href]="elm.deployment" target="_blank" rel="noreferrer">Deployment</a>
+                            </ng-container>
+                          </span>
+                        </div>
+
+                        <!-- <span>{{ elm.description }}</span> -->
+                        <span style="font-size: 22px">{{ elm.details }}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="counter">Page 4</span>
+        </div>
+      </div>
     </div>
   </div>
-
 </div>

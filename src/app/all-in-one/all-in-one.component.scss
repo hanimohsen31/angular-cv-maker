@@ -87,3 +87,28 @@
     overflow: auto;
   }
 }
+
+.subheader{
+  font-size: 24px;
+  font-weight: 800;
+  color: #3142db;
+}
+
+.projects-in-details-links-container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+}
+
+.projects-in-details-links{
+  display: flex;
+  a,span{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+  }
+}
+.projects-in-details-name{
+  color: #3142db;
+}

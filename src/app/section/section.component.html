@@ -1,0 +1,22 @@
+<div class="row">
+  <!-- if title -->
+  <div class="col-12 title" *ngIf="isTitle">
+    <div>{{ DataObject.Name }}</div>
+    <div>{{ DataObject.Title }}</div>
+  </div>
+
+  <!-- if paragrapg -->
+  <div [class]="'text col-' + mainSectionWidth" >{{ DataText }}</div>
+
+  <!-- if list ex. WORK EXPERIENCE -->
+   <div class="list-container">
+    <div class="list" *ngFor="let elm of DataList">
+      <div class="content1" [class.list-item]="elm.isListItem" [style.color]="elm.color" [style.font-weight]="elm.fw">{{elm.content}}</div>
+      <div class="content1" [class.list-item]="elm.isListItem" [style.color]="elm.color" [style.font-weight]="elm.fw">{{elm.content}}</div>
+      <div class="content3" [class.list-item]="elm.isListItem" [style.color]="elm.color" [style.font-weight]="elm.fw">{{elm.content}}</div>
+      <div class="content4" [class.list-item]="elm.isListItem" [style.color]="elm.color" [style.font-weight]="elm.fw">{{elm.content}}</div>
+      <div class="content5" [class.list-item]="elm.isListItem" [style.color]="elm.color" [style.font-weight]="elm.fw">{{elm.content}}</div>
+      <div class="content6" [class.list-item]="elm.isListItem" [style.color]="elm.color" [style.font-weight]="elm.fw">{{elm.content}}</div>
+    </div>
+   </div>
+</div>
