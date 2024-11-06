@@ -1,5 +1,16 @@
 {
   "projects": {
-    "default": "cv-angular-500"
-  }
+    "default": "collection-5000"
+  },
+  "targets": {
+    "collection-5000": {
+      "hosting": {
+        "angular-cv-5000": [
+          "angular-cv-5000"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build && git add . && git commit -m 'deploy' && git push origin main && firebase deploy"
+    "deploy": "ng build && git add . && git commit -m 'deploy' && git push origin main && firebase deploy",
+    "ss":"firebase target:apply hosting angular-cv-5000 angular-cv-5000"
   },
   "private": true,
   "dependencies": {

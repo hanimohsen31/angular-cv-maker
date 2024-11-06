@@ -1,0 +1,27 @@
+<div class="container-fluid" [class.v2-container]="!isPrinting">
+  <div class="pages-container">
+    <app-dynamic-page [sections]="page1Data" [cvData]="cvData" [pageIndex]="1"></app-dynamic-page>
+    <app-dynamic-page [sections]="page2Data" [cvData]="cvData" [pageIndex]="2"></app-dynamic-page>
+    <app-dynamic-page [sections]="page3Data" [cvData]="cvData" [pageIndex]="3" [isOneSide]="true"></app-dynamic-page>
+  </div>
+  <div class="inputs-container card p-4" [class.d-none]="isPrinting">
+    <dynamic-form [cvData]="cvData" prop="Name" [formControllers]="['text']" (finalValue)="getDataEmitted($event, 'Name')"></dynamic-form>
+    <dynamic-form [cvData]="cvData" prop="Title" [formControllers]="['text']" (finalValue)="getDataEmitted($event, 'Title')"></dynamic-form>
+    <dynamic-form [cvData]="cvData" prop="PersonalProfile" [formControllers]="['text']" (finalValue)="getDataEmitted($event, 'PersonalProfile')"></dynamic-form>
+    <dynamic-form [cvData]="cvData" prop="WorkExperience" [formControllers]="['comp', 'desc', 'period', 'time', 'title', 'show']" (finalValue)="getDataEmitted($event, 'WorkExperience')"></dynamic-form>
+    <dynamic-form [cvData]="cvData" prop="Contacts" [formControllers]="['icon', 'link', 'title']" (finalValue)="getDataEmitted($event, 'Contacts')"></dynamic-form>
+    <dynamic-form [cvData]="cvData" prop="TechnicalSkills" [formControllers]="['skill']" (finalValue)="getDataEmitted($event, 'TechnicalSkills')"></dynamic-form>
+    <dynamic-form [cvData]="cvData" prop="LanguageSkills" [formControllers]="['language']" (finalValue)="getDataEmitted($event, 'LanguageSkills')"></dynamic-form>
+    <dynamic-form [cvData]="cvData" prop="TechnicalSkillsExplained" [formControllers]="['text']" (finalValue)="getDataEmitted($event, 'TechnicalSkillsExplained')"></dynamic-form>
+    <dynamic-form [cvData]="cvData" prop="InterpersonalSkillsExplained" [formControllers]="['text']" (finalValue)="getDataEmitted($event, 'InterpersonalSkillsExplained')"></dynamic-form>
+    <dynamic-form [cvData]="cvData" prop="Projects" [formControllers]="['name', 'description', 'code', 'deployment', 'show']" (finalValue)="getDataEmitted($event, 'Projects')"></dynamic-form>
+    <dynamic-form [cvData]="cvData" prop="Education" [formControllers]="['desc', 'lic', 'period', 'grade', 'project']" (finalValue)="getDataEmitted($event, 'Education')"></dynamic-form>
+    <dynamic-form [cvData]="cvData" prop="Courses" [formControllers]="['course', 'details', 'show']" (finalValue)="getDataEmitted($event, 'Courses')"></dynamic-form>
+    <dynamic-form [cvData]="cvData" prop="PersonalInfo" [formControllers]="['info']" (finalValue)="getDataEmitted($event, 'PersonalInfo')"></dynamic-form>
+    <div class="buttons d-flex gap-3 w-100">
+      <button class="btn btn-outline-primary flex-1" (click)="console()">Console</button>
+      <button class="btn btn-outline-primary flex-1" (click)="update()">Update</button>
+      <button class="btn btn-outline-primary flex-1" (click)="print()">Print</button>
+    </div>
+  </div>
+</div>

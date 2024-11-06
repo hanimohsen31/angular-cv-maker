@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { DataService } from '../services/data.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-all-in-one',
@@ -30,7 +30,7 @@ export class AllInOneComponent {
   }
 
   getData() {
-    this.DataService.inputs$.subscribe((res: any) => {
+    this.DataService.inputs.asObservable().subscribe((res: any) => {
       let array = Object.entries(res);
       array.map((elm: any) => {
         let newObj: any;

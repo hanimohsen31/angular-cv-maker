@@ -1,0 +1,364 @@
+{
+  "Contacts": [
+    {
+      "icon": "assets/images/linkedin.webp",
+      "link": "https://www.linkedin.com/in/haniomhsen3810/",
+      "title": "in/haniomhsen3810"
+    },
+    {
+      "icon": "assets/images/email.svg",
+      "link": "",
+      "title": "hanimohsen31@gmail.com"
+    },
+    {
+      "icon": "assets/images/telephoone.svg",
+      "link": "",
+      "title": "+201116886029"
+    },
+    {
+      "icon": "assets/images/github.png",
+      "link": "https://github.com/hanimohsen31",
+      "title": "haniomhsen31"
+    }
+  ],
+  "Courses": [
+    {
+      "course": "Angular NgRx: Getting Started",
+      "details": "Pluralsight - Deborah Kurata, and Duncan Hunter (April 2024)",
+      "show": "true"
+    },
+    {
+      "course": "Node.js, Express, MongoDB & More: The Complete Bootcamp",
+      "details": "Udemy - Jonas Schmedtmann (Feb 2024)",
+      "show": "true"
+    },
+    {
+      "course": "Testing JavaScript with Cypress – Full Course",
+      "details": "FreeCodeCamp.org - Ryan Solomon (Oct 2023)",
+      "show": "true"
+    },
+    {
+      "course": "Angular Testing Masterclass (Angular 16)",
+      "details": "Udemy- Angular University (Oct 2023)",
+      "show": "true"
+    },
+    {
+      "course": "RxJS in Angular- Reactive Development",
+      "details": "Pluralsight - Deborah Kurata (June 2023)",
+      "show": "true"
+    },
+    {
+      "course": "The Complete Angular Course: Beginner to Advanced",
+      "details": "Udemy - Mosh Hamedani (Feb 2023)",
+      "show": "true"
+    },
+    {
+      "course": "Angular Front-end Course",
+      "details": "Route Academy (Nov 2022)",
+      "show": "true"
+    },
+    {
+      "course": "React - The Complete Guide (incl Hooks, React Router, Redux)",
+      "details": "Udemy - Maximilian Schwarzmüller (June 2022)",
+      "show": "true"
+    },
+    {
+      "course": "CS50's Introduction to Computer Science Harvard University ",
+      "details": "edx.org (Dec 2021)",
+      "show": "true"
+    },
+    {
+      "course": "Getting Started as a Freelancer (Upwork) ",
+      "details": "Mahara-Tech (Sep 2021)",
+      "show": "true"
+    },
+    {
+      "course": "Decor & Interior Design Course ",
+      "details": "Benaa academy - Eng. Reham Mohsen (Aug 2019)",
+      "show": "false"
+    }
+  ],
+  "Education": [
+    {
+      "desc": "Information Technology Institute (ITI) - Mansoura Branch",
+      "lic": "Full Stack Web Development using Python",
+      "period": "Intensive Code Camp Aug 2021 - Dec 2021",
+      "grade": "Grade: Good",
+      "project": "Graduation project: Netflix Cloning (React and Django)."
+    },
+    {
+      "desc": "",
+      "lic": "B.S Degree in Engineering Mansoura University.",
+      "period": "From Sep 2013 to June 2018",
+      "grade": "Grade: Good",
+      "project": "Graduation project: Netflix Cloning (React and Django)."
+    }
+  ],
+  "InterpersonalSkillsExplained": [
+    {
+      "text": "The ability to work independently and in a team, take ownership of tasks, deliver quality work within deadlines. Also flexible and able to find creative and efficient solutions to complex technical challenges."
+    }
+  ],
+  "LanguageSkills": [
+    {
+      "language": "Arabic"
+    },
+    {
+      "language": "English"
+    }
+  ],
+  "Name": [
+    {
+      "text": "HANI MOHSEN"
+    }
+  ],
+  "Title": [
+    {
+      "text": "FRONT-END DEVELOPER"
+    }
+  ],
+  "Objective": "To obtain a challenging position as a junior front-end developer utilizing my proficiency in Angular and React.js to contribute to the development of user-friendly and responsive web applications. With a strong foundation in HTML, CSS, and JavaScript, I am committed to developing efficient, maintainable, and scalable code while continuously learning and adapting to new technologies and industry trends.",
+  "Personal": "Front-end developer with 3 years of experience in web development using Angular and React.js. Strong knowledge of building responsive, user-friendly web applications considering best practices and clean code. Always Keeping myself up to date with the latest technologies and industry trends.",
+  "PersonalInfo": {
+    "address1": "Address 1: Mansoura City, Dakahlia",
+    "address2": "Address 2: Maadi, Cairo",
+    "military": "Military Status: Exempted"
+  },
+  "Projects": [
+    {
+      "name": "Katana",
+      "description": "Telecommunication Management System.",
+      "code": "",
+      "deployment": "",
+      "show": "true"
+    },
+    {
+      "name": "Cars Import initiative for Egyptians abroad",
+      "description": "President's initiative to import cars for Egyptians abroad",
+      "code": "",
+      "deployment": "",
+      "show": "true"
+    },
+    {
+      "name": "COP 27",
+      "description": "The 27th World Climate Conference in Sharm El Sheikh",
+      "code": "",
+      "deployment": "",
+      "show": "true"
+    },
+    {
+      "name": "Hafa",
+      "description": "E-commrce web platform",
+      "code": "",
+      "deployment": "",
+      "show": "true"
+    },
+    {
+      "name": "Hardware Availability",
+      "description": "Front-end Micro Service",
+      "code": "",
+      "deployment": "",
+      "show": "true"
+    },
+    {
+      "name": "Report Builder",
+      "description": "Front-end Micro Service",
+      "code": "",
+      "deployment": "",
+      "show": "true"
+    },
+    {
+      "name": "Data Logger System",
+      "description": "A system that collects and visualize data obtained from meteorological devices",
+      "code": "",
+      "deployment": "",
+      "show": "true"
+    },
+    {
+      "name": "Screen Recording App",
+      "description": "",
+      "code": "https://github.com/hanimohsen31/Screen-Record",
+      "deployment": "https://screen-recorder-500.web.app/",
+      "show": "false"
+    },
+    {
+      "name": "E-Commerce Web app with Angular",
+      "description": "",
+      "code": "https://github.com/hanimohsen31/Angular-Ecommerce",
+      "deployment": "https://angular-ecommerce-300.web.app/home",
+      "show": "false"
+    },
+    {
+      "name": "E-Commerce Web app with React",
+      "description": "",
+      "code": "https://github.com/hanimohsen31/E-CommerceApp",
+      "deployment": "https://react-ecommerce-500.web.app/",
+      "show": "false"
+    },
+    {
+      "name": "Food Calories Calculator",
+      "description": "",
+      "code": "https://github.com/hanimohsen31/FoodCalculator",
+      "deployment": "https://food-calculator-800.web.app/",
+      "show": "false"
+    },
+    {
+      "name": "Netflix Cloning (Using React and Django)",
+      "description": "",
+      "code": "https://github.com/hanimohsen31/Netflix-V.4-AIO",
+      "deployment": "",
+      "show": "true"
+    },
+    {
+      "name": "Personal Website",
+      "description": "",
+      "code": "https://github.com/hanimohsen31/Personal-WebSite",
+      "deployment": "https://collection-300.web.app/",
+      "show": "false"
+    }
+  ],
+  "TechnicalSkills": [
+    {
+      "skill": "Angular"
+    },
+    {
+      "skill": "TypeScript"
+    },
+    {
+      "skill": "RxJS"
+    },
+    {
+      "skill": "NgRx"
+    },
+    {
+      "skill": "HTML"
+    },
+    {
+      "skill": "CSS and SCSS"
+    },
+    {
+      "skill": "Bootstrap"
+    },
+    {
+      "skill": "JavaScript"
+    },
+    {
+      "skill": "React.js"
+    },
+    {
+      "skill": "Node.js"
+    },
+    {
+      "skill": "Express.js"
+    },
+    {
+      "skill": "MySQL"
+    },
+    {
+      "skill": "Git and GitHub"
+    },
+    {
+      "skill": "Cypress"
+    },
+    {
+      "skill": "Python"
+    },
+    {
+      "skill": "Linux"
+    }
+  ],
+  "TechnicalSkillsExplained": [
+    {
+      "text": "Proficient in HTML, CSS, SCSS, and Bootstrap for responsive design and efficient styling. Strong in JavaScript and TypeScript for interactive web applications. Experienced with React.js and Angular for building scalable components, and skilled in writing clean, maintainable code with API integration experience."
+    }
+  ],
+  "WorkExperience": [
+    {
+      "comp": "Digis Squared",
+      "desc": "Angular Developer Working on Telecommunication Management System.",
+      "period": "June 2024 till Now",
+
+      "time": "Full Time",
+      "title": "Front-end Developer",
+      "show": "true"
+    },
+    {
+      "comp": "Hafa",
+      "desc": "Angular Developer Building e-commerce web application.",
+      "period": "June 2024 till August 2024",
+
+      "time": "Part Time",
+      "title": "Front-end Developer",
+      "show": "true"
+    },
+    {
+      "comp": "GET Group Holdings Ltd.",
+      "desc": "Angular Developer Developing Projects such as Cars Import initiative for Egyptians abroad, COP 27 and Report Builder.",
+      "period": "September 2022 till Now ",
+
+      "time": "Full Time",
+      "title": "Front-end Developer",
+      "show": "true"
+    },
+    {
+      "comp": "Freelancer",
+      "desc": "React e-commerce web application.",
+      "period": "May 2022 - July 2022 | 3 Months",
+
+      "time": "Freelancer",
+      "title": "Front-end Developer",
+      "show": "true"
+    },
+    {
+      "comp": "Information Technology Institute (ITI)",
+      "desc": "Full Stack Developer using React.js and Django.",
+      "period": "August 2021 - December 2021 | 3 Months",
+      "shortForm": "false",
+
+      "time": "Internship",
+      "title": "Full Stack Web Development using Python",
+      "show": "true"
+    },
+    {
+      "comp": "Freelancer",
+      "desc": "3d Visualizerusing 3ds Max, and Photoshop.",
+      "period": "June 2021 - September 2022 | 1 years and 3 Months",
+
+      "time": "Part Time",
+      "title": "Interior Designer",
+      "show": "true"
+    },
+    {
+      "comp": "Sketch Company ",
+      "desc": "Designer for Residential and Commercial Projects.",
+      "period": "Part Time| April 2020 - June 2020 | 3 Months",
+
+      "time": "Part Time",
+      "title": "Interior Designer",
+      "show": "true"
+    },
+    {
+      "comp": "El-Asrya Company ",
+      "desc": "Fiber networks and infrastructure projects.",
+      "period": "September 2019 -June 2021 | 1 Year and 9 Months",
+
+      "time": "Full Time",
+      "title": "Technical Office Engineer ",
+      "show": "true"
+    },
+    {
+      "comp": "Skyline for décor and interior ",
+      "desc": "Implementing Interior Design works.",
+      "period": "November 2018 - June 2019 | 8 Months",
+
+      "time": "Full Time",
+      "title": "Site Engineer",
+      "show": "true"
+    }
+  ],
+  "PersonalProfile": [
+    {
+      "text": "Front-end developer with 3 years of experience in web development using Angular and React.js. Strong knowledge of building responsive, user-friendly web applications considering best practices and clean code. Always Keeping myself up to date with the latest technologies and industry trends."
+    }
+  ]
+}

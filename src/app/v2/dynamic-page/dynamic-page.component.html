@@ -1,0 +1,177 @@
+<div class="paper-container Page Paper pc">
+  <!-- ------------------------------------------------- title ------------------------------------------------ -->
+  <div class="col-12">
+    <div class="Name">
+      <span>{{ text(cvData?.Name) }}</span>
+      <div class="Title">{{ text(cvData?.Title) }}</div>
+    </div>
+  </div>
+  <!-- --------------------------------------------- page content --------------------------------------------- -->
+  <div class="row d-flex justify-content-between">
+    <!-- --------------------------------------------- left side ---------------------------------------------- -->
+    <div class="left" [class.col-64]="!isOneSide">
+      <div class="Section" *ngIf="show('Contacts')">
+        <div class="header">Personal Profile</div>
+        <div class="body">
+          <div class="sideLineAndIcons">
+            <img src="assets/images/location.svg" alt="" />
+            <div class="line"></div>
+          </div>
+          <div class="content">{{ text(cvData.PersonalProfile) }}</div>
+        </div>
+      </div>
+      <!-- ------------------------------------------ WorkExperience ------------------------------------------ -->
+      <div class="Section WorkExperience Work" *ngIf="show('WorkExperience')">
+        <div class="header">Work Experience</div>
+        <div class="body">
+          <div class="sideLineAndIcons">
+            <img src="assets/images/circle.png" alt="" />
+            <div class="line"></div>
+          </div>
+          <div class="content">
+            <div *ngFor="let elm of sliceShow('WorkExperience')">
+              <ng-container *ngIf="elm?.show == 'true'">
+                <h3>
+                  <span *ngIf="elm.title">{{ elm.title }} </span>
+                  <span *ngIf="elm.time">({{ elm?.time }})</span>
+                </h3>
+                <h3 *ngIf="elm?.comp">{{ elm?.comp }}</h3>
+                <ul>
+                  <li *ngIf="elm?.desc">{{ elm?.desc }}</li>
+                  <li *ngIf="elm?.period">{{ elm?.period }}</li>
+                </ul>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ------------------------------------- TechnicalSkillsExplained ------------------------------------- -->
+      <div class="Section" *ngIf="show('TechnicalSkillsExplained')">
+        <div class="header">TECHNICAL SKILLS</div>
+        <div class="body">
+          <div class="sideLineAndIcons">
+            <img src="assets/images/location.svg" alt="" />
+            <div class="line"></div>
+          </div>
+          <div class="content">{{ text(cvData.TechnicalSkillsExplained) }}</div>
+        </div>
+      </div>
+      <!-- ----------------------------------- InterpersonalSkillsExplained ----------------------------------- -->
+      <div class="Section" *ngIf="show('InterpersonalSkillsExplained')">
+        <div class="header">SOFT SKILLS</div>
+        <div class="body">
+          <div class="sideLineAndIcons">
+            <div class="filler"></div>
+            <div class="line"></div>
+          </div>
+          <div class="content">{{ text(cvData.InterpersonalSkillsExplained) }}</div>
+        </div>
+      </div>
+      <!-- --------------------------------------------- Education -------------------------------------------- -->
+      <div class="Section Education" *ngIf="show('Education')">
+        <div class="header">Education</div>
+        <div class="body">
+          <div class="sideLineAndIcons">
+            <img src="assets/images/location.svg" alt="" />
+            <div class="line"></div>
+          </div>
+          <div class="content">
+            <div *ngFor="let elm of cvData.Education" class="edu">
+              <h3>{{ elm?.lic }}</h3>
+              <h3>{{ elm?.desc }}</h3>
+              <ul>
+                <li *ngIf="elm.grade">{{ elm.period }}</li>
+                <li *ngIf="elm.grade">{{ elm.grade }}</li>
+                <li *ngIf="elm.grade">{{ elm.project }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- --------------------------------------------- Courses ---------------------------------------------- -->
+      <div class="Section Training" *ngIf="show('Courses')">
+        <div class="header">Training And Courses</div>
+        <div class="body">
+          <div class="sideLineAndIcons">
+            <div class="filler"></div>
+            <div class="line"></div>
+          </div>
+          <div class="content">
+            <ul>
+              <ng-container *ngFor="let elm of sliceShow('Courses')">
+                <li *ngIf="elm.show == 'true'">
+                  <span>{{ elm.course }}</span>
+                  <span>{{ elm.details }}</span>
+                </li>
+              </ng-container>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- --------------------------------------------- Personal --------------------------------------------- -->
+      <div class="Section Personal" *ngIf="show('PersonalInfo')">
+        <div class="header">Personal Info.</div>
+        <div class="body">
+          <div class="sideLineAndIcons">
+            <div class="filler"></div>
+            <div class="line"></div>
+          </div>
+          <div class="content">
+            <ul>
+              <li *ngFor="let elm of cvData.PersonalInfo">{{ elm.info }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------------------------------------------- right side --------------------------------------------- -->
+    <div class="right py-3 col-4" *ngIf="!isOneSide">
+      <!-- --------------------------------------------- Contacts --------------------------------------------- -->
+      <div class="Contacts" *ngIf="show('Contacts')">
+        <h3>Contacts</h3>
+        <div *ngFor="let elm of cvData.Contacts" class="contact">
+          <div class="icon">
+            <img [src]="elm.icon" alt="" />
+          </div>
+          <a *ngIf="elm.link" [href]="elm.link" target="_blank" rel="noreferrer">{{ elm.title }}</a>
+          <span *ngIf="!elm.link">{{ elm.title }}</span>
+        </div>
+      </div>
+      <!-- ------------------------------------------ TechnicalSkills ----------------------------------------- -->
+      <div class="Technical" *ngIf="show('TechnicalSkills')">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li *ngFor="let elm of cvData.TechnicalSkills">{{ elm.skill }}</li>
+        </ul>
+      </div>
+      <!-- ------------------------------------------ LanguageSkills ------------------------------------------ -->
+      <div class="languageSkills" *ngIf="show('LanguageSkills')">
+        <h3>language Skills</h3>
+        <ul>
+          <li *ngFor="let elm of cvData.LanguageSkills">{{ elm.language }}</li>
+        </ul>
+      </div>
+      <!-- --------------------------------------------- Projects --------------------------------------------- -->
+      <div class="Projects" *ngIf="show('Projects')">
+        <h3>Projects</h3>
+        <ul>
+          <ng-container *ngFor="let elm of cvData.Projects">
+            <li *ngIf="elm?.show == 'true'">
+              <h4>{{ elm?.name }}</h4>
+              <h5 *ngIf="elm.description">{{ elm?.description }}</h5>
+              <div>
+                <a *ngIf="elm?.code" [href]="elm?.code" target="_blank" rel="noreferrer"> Project Code </a>
+                <ng-container *ngIf="elm?.deployment == 'true'">
+                  <span>&#160;-&#160;</span>
+                  <a [href]="elm.deployment" target="_blank" rel="noreferrer"> Deployment </a>
+                </ng-container>
+              </div>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- --------------------------------------------- page number ---------------------------------------------- -->
+  <span class="counter">Page {{ pageIndex }}</span>
+</div>

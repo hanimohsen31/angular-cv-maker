@@ -1,11 +1,12 @@
 export const environment = {
   firebaseConfig: {
-    apiKey: 'AIzaSyCRc3XpGlzK5HjK9aflTCNHRmBQaBuvekI',
-    authDomain: 'cv-angular-500.firebaseapp.com',
-    projectId: 'cv-angular-500',
-    storageBucket: 'cv-angular-500.appspot.com',
-    messagingSenderId: '908151641385',
-    appId: '1:908151641385:web:fe51d2d9b65a8808701338',
+    apiKey: "AIzaSyBs8B2jSQcCwZe7Uz0lP9GGiW7ZaFb-F1w",
+    authDomain: "collection-5000.firebaseapp.com",
+    databaseURL: "https://collection-5000-default-rtdb.firebaseio.com",
+    projectId: "collection-5000",
+    storageBucket: "collection-5000.firebasestorage.app",
+    messagingSenderId: "1071454138267",
+    appId: "1:1071454138267:web:574e3f065fc4b427c3fb3e"
   },
-  baseUrl: 'https://cv-angular-500-default-rtdb.firebaseio.com',
+  baseUrl: 'https://collection-5000-default-rtdb.firebaseio.com',
 };

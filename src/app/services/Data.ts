@@ -1,22 +1,22 @@
 export const Data: any = {
   Contacts: [
     {
-      icon: 'assets/images/linkedin.webp',
-      link: 'https://www.linkedin.com/in/haniomhsen3810/',
-      title: 'in/haniomhsen3810',
+      "icon": 'assets/images/linkedin.webp',
+      "link": 'https://www.linkedin.com/in/haniomhsen3810/',
+      "title": 'in/haniomhsen3810',
     },
     {
-      icon: 'assets/images/email.svg',
-      title: 'hanimohsen31@gmail.com',
+      "icon": 'assets/images/email.svg',
+      "title": 'hanimohsen31@gmail.com',
     },
     {
-      icon: 'assets/images/telephoone.svg',
-      title: '+201116886029',
+      "icon": 'assets/images/telephoone.svg',
+      "title": '+201116886029',
     },
     {
-      icon: 'assets/images/github.png',
-      link: 'https://github.com/hanimohsen31',
-      title: 'haniomhsen31',
+      "icon": 'assets/images/github.png',
+      "link": 'https://github.com/hanimohsen31',
+      "title": 'haniomhsen31',
     },
   ],
   Courses: [

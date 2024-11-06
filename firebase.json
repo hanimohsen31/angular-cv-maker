@@ -1,11 +1,8 @@
 {
   "hosting": {
+    "target": "angular-cv-5000",
     "public": "dist/angular17test2/browser",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",

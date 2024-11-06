@@ -1,0 +1,16 @@
+.counter {
+  width: 20px;
+  justify-content: center;
+}
+.actions-buttons {
+  button {
+    img {
+      filter: brightness(0.2);
+    }
+    &:hover {
+      img {
+        filter: none;
+      }
+    }
+  }
+}

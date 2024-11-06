@@ -12,7 +12,6 @@ export class DataService {
   ngOnInit() {}
 
   inputs: any = new BehaviorSubject<any>({});
-  inputs$: any = this.inputs.asObservable();
 
   updateAddress(change: any) {
     this.inputs.next({ ...this.inputs.value, ...change });
@@ -26,5 +25,25 @@ export class DataService {
   updateData(id: any, data: any) {
     let url = environment.baseUrl + `/users/${id}.json`;
     return this.HttpClient.put(url, data);
+  }
+
+  updateCVDataV2(data: any) {
+    let url = environment.baseUrl + `/cv.json`;
+    return this.HttpClient.put(url, data);
+  }
+
+  getCVDataV2() {
+    let url = environment.baseUrl + `/cv.json`;
+    return this.HttpClient.get(url);
+  }
+
+  getJsonData() {
+    let url = `assets/cv.json`;
+    return this.HttpClient.get(url);
+  }
+
+  getJsonData2() {
+    let url = `assets/cv2.json`;
+    return this.HttpClient.get(url);
   }
 }

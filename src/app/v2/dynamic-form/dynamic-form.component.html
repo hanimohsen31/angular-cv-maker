@@ -1,0 +1,45 @@
+<form [formGroup]="form" class="m-0" (ngSubmit)="onSubmit()">
+  <h4>{{ prop }}</h4>
+  <div formArrayName="list">
+    <ng-container *ngFor="let elm of skillsControls; let i = index">
+      <p class="me-3" *ngIf="i == 0">{{ formControllers | json }}</p>
+
+      <div [formGroupName]="i" class="d-flex gap-1 justify-content-between mb-2">
+        <p class="d-flex counter m-0 align-items-center">{{ i + 1 }}</p>
+
+        <div class="skill-input flex-1" *ngFor="let control of formControllers">
+          <input [formControlName]="control" (keyup)="onSubmit()" [placeholder]="control" class="form-control" />
+        </div>
+
+        <div class="actions-buttons d-flex gap-1">
+          <button type="button" (click)="removeSkill(i)" [disabled]="skillsControls.length === 1" class="btn btn-outline-danger">
+            <img src="assets/images/delete.svg" alt="" />
+          </button>
+          <button type="button" [disabled]="formControllers[0] == 'text'" (click)="changeIndx(elm, i, 'up')" class="btn btn-outline-primary">
+            <img src="assets/images/north.svg" alt="" />
+          </button>
+          <button type="button" [disabled]="formControllers[0] == 'text'" (click)="changeIndx(elm, i, 'down')" class="btn btn-outline-primary">
+            <img src="assets/images/south.svg" alt="" />
+          </button>
+          <button type="button" [disabled]="formControllers[0] == 'text'" (click)="addSkill()" [ngStyle]="i == skillsControls.length - 1 ? { visibility: 'visible' } : { visibility: 'hidden' }" class="btn btn-outline-primary">
+            <img src="assets/images/add.svg" alt="" />
+          </button>
+          <button type="submit" [disabled]="form.invalid" [ngStyle]="i == skillsControls.length - 1 ? { visibility: 'visible' } : { visibility: 'hidden' }" class="btn btn-outline-primary">
+            <img src="assets/images/publish.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- <div class="slices d-flex gap-2 align-items-center">
+    <label class="d-block">
+      <input type="checkbox" />
+      Apply Slice
+    </label>
+    <input type="number" placeholder="slice start" class="form-control" />
+    <input type="number" placeholder="slice end" class="form-control" />
+  </div> -->
+
+  <hr />
+</form>
