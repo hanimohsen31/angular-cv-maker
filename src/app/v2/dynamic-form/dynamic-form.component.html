@@ -24,9 +24,9 @@
           <button type="button" [disabled]="formControllers[0] == 'text'" (click)="addSkill()" [ngStyle]="i == skillsControls.length - 1 ? { visibility: 'visible' } : { visibility: 'hidden' }" class="btn btn-outline-primary">
             <img src="assets/images/add.svg" alt="" />
           </button>
-          <button type="submit" [disabled]="form.invalid" [ngStyle]="i == skillsControls.length - 1 ? { visibility: 'visible' } : { visibility: 'hidden' }" class="btn btn-outline-primary">
+          <!-- <button type="submit" [disabled]="form.invalid" [ngStyle]="i == skillsControls.length - 1 ? { visibility: 'visible' } : { visibility: 'hidden' }" class="btn btn-outline-primary">
             <img src="assets/images/publish.svg" alt="" />
-          </button>
+          </button> -->
         </div>
       </div>
     </ng-container>

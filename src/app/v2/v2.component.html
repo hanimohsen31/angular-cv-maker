@@ -19,7 +19,7 @@
     <dynamic-form [cvData]="cvData" prop="Courses" [formControllers]="['course', 'details', 'show']" (finalValue)="getDataEmitted($event, 'Courses')"></dynamic-form>
     <dynamic-form [cvData]="cvData" prop="PersonalInfo" [formControllers]="['info']" (finalValue)="getDataEmitted($event, 'PersonalInfo')"></dynamic-form>
     <div class="buttons d-flex gap-3 w-100">
-      <button class="btn btn-outline-primary flex-1" (click)="console()">Console</button>
+      <!-- <button class="btn btn-outline-primary flex-1" (click)="console()">Console</button> -->
       <button class="btn btn-outline-primary flex-1" (click)="update()">Update</button>
       <button class="btn btn-outline-primary flex-1" (click)="print()">Print</button>
     </div>
